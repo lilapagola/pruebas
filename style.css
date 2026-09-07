@@ -1,1 +1,155 @@
+/* styles.css
+   Paleta: gama de rojos y amarillos (pergamino, oro viejo, rojo Gryffindor, ascua)
+*/
 
+:root {
+  --pergamino: #f6e8c9;
+  --pergamino-panel: #f0dfae;
+  --borde-oro: #b8860b;
+  --rojo-gryffindor: #7a0c0c;
+  --ascua: #c1440e;
+  --ascua-oscuro: #8f3009;
+  --texto-p: #6b2e12;
+  --texto-claro: #fdf6e3;
+
+  --fuente-titular: "Cinzel", "Georgia", serif;
+  --fuente-subtitular: "Cormorant Garamond", "Georgia", serif;
+  --fuente-cuerpo: "EB Garamond", "Georgia", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #2b1608;
+  font-family: var(--fuente-cuerpo);
+}
+
+.pergamino-fondo {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 48px 20px;
+  background: radial-gradient(circle at top, #3a1c0c 0%, #1c0d04 75%);
+}
+
+.pergamino {
+  width: 100%;
+  max-width: 680px;
+  background: var(--pergamino);
+  border: 1px solid var(--borde-oro);
+  outline: 6px double var(--borde-oro);
+  outline-offset: -14px;
+  padding: 56px 48px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.eyebrow {
+  margin: 0 0 4px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.72rem;
+  color: var(--ascua-oscuro);
+  font-family: var(--fuente-cuerpo);
+}
+
+/* ---------- Tipografía en gama roja y amarilla ---------- */
+
+h1 {
+  margin: 0 0 8px;
+  font-family: var(--fuente-titular);
+  font-size: 2.4rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: var(--rojo-gryffindor);
+}
+
+h2 {
+  margin: 32px 0 10px;
+  font-family: var(--fuente-subtitular);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--borde-oro);
+}
+
+p {
+  margin: 0 0 16px;
+  text-align: left;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: var(--texto-p);
+}
+
+a {
+  color: var(--ascua);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--texto-claro);
+  background: var(--ascua);
+  outline: none;
+}
+
+/* ---------- Elemento distintivo: trazo del vuelo ---------- */
+
+.divisor {
+  display: block;
+  width: 220px;
+  height: 28px;
+  margin: 0 auto 28px;
+  color: var(--borde-oro);
+}
+
+/* ---------- Sección interactiva ---------- */
+
+.interactivo {
+  margin-top: 40px;
+  padding: 24px 28px;
+  background: var(--pergamino-panel);
+  border-left: 4px solid var(--ascua);
+}
+
+.interactivo h2 {
+  margin-top: 0;
+}
+
+.opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.opciones a {
+  display: inline-block;
+  padding: 10px 16px;
+  background: var(--rojo-gryffindor);
+  color: var(--texto-claro);
+  text-align: left;
+}
+
+.opciones a:hover,
+.opciones a:focus-visible {
+  background: var(--ascua);
+  color: var(--texto-claro);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 520px) {
+  .pergamino {
+    padding: 36px 24px;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+}
